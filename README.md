@@ -1,16 +1,16 @@
-##Assignment 2 - Devek.ai
-#Objective
+## Assignment 2 - Devek.ai
+# Objective
 Develop a simple real-time chat application using WebSockets. The app should allow users to
 join a chat room and send messages in real-time. The purpose of this assignment is to assess
 your ability to build a full-stack application with real-time communication, structure a project
 efficiently, and implement best coding practices.
-#Tech Stack (Requirements & Recommendations)
+# Tech Stack (Requirements & Recommendations)
 ● Must Use: WebSockets infrastructure
 ● Recommended: Bun (optional) for both backend and frontend, ShadCN/MUI for the
 frontend
 ● Frontend: React with TypeScript
 ● Backend & Database: Any technology of your choice that fits the project
-#Requirements
+# Requirements
 1. Backend (WebSocket Server)
 ● Set up a WebSocket server that enables users to join a chat room.
 ● Handle user connections, disconnections, and message broadcasting.
@@ -30,7 +30,7 @@ frontend
 ● Include a README.md with:
 ○ Setup guide.
 
-##How to run the app?
+## How to run the app?
 On the main folder of the proyect use:
 yarn install
 yarn run dev or yarn run start
@@ -45,7 +45,7 @@ Use of common as package to share features between the client and the server. In
 Use of jwswebtoken for authentication propose.
 
 ● (Bonus) Dockerize the application for simplified deployment. (YES)
-#Evaluation Criteria
+# Evaluation Criteria
 ● Code Quality: Clean, modular, and well-structured code.
 ● Real-time Functionality: Efficient WebSocket implementation.
 ● Scalability: Considerations for handling multiple users.
