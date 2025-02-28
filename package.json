@@ -1,0 +1,30 @@
+{
+  "name": "ws-chat",
+  "version": "1.0.0",
+  "author": "Ernesto Carmona",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "./packages/common",
+    "./packages/server",
+    "./packages/client"
+  ],
+  "engines": {
+    "node": ">=18.12.0",
+    "npm": ">=8.6.0"
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -A -ptv run build",
+    "check-types": "yarn workspaces foreach -A -ptv run check-types",
+    "format": "yarn prettier --check 'src/**/*.ts' 'tests/**/*.ts'",
+    "format:fix": "yarn prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
+    "lint": "yarn workspaces foreach -A -v run lint",
+    "dev": "yarn workspaces foreach -A -piv run dev",
+    "start": "yarn workspaces foreach -A -piv run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed-halliwell/ws-chat.git"
+  },
+  "packageManager": "yarn@4.0.2"
+}

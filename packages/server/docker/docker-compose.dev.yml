@@ -1,0 +1,27 @@
+version: '3'
+services:
+  schema_migration:
+      build:
+        context: ./..
+        dockerfile: schema.dockerfile
+      depends_on:
+        - postgres
+      environment:
+        - DB_HOST=postgres
+        - DB_NAME=local
+        - DB_PWD=local
+        - DB_USER=local
+        - DB_RW_USER=local_service
+        - DB_READ_USER=local_ro
+        - MIGRATION_RETRIES=60
+        - MIGRATE_TEST_DATA=true
+        - FLYWAY_INIT_SQL=CREATE ROLE cloudsqlsuperuser; CREATE USER local_service WITH PASSWORD 'local'; CREATE USER local_ro;
+  postgres:
+    image: postgres:14
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+      - POSTGRES_DB=local
