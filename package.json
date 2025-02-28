@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ed-halliwell/ws-chat.git"
+    "url": "git+https://github.com/eceescalona/ws-chat.git"
   },
   "packageManager": "yarn@4.0.2"
 }
